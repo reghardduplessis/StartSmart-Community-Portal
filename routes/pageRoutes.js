@@ -2,6 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
+const { events } = require('../public/data/events');
 
 router.get('/', (req, res) => {
     res.render('./pages/home');
@@ -12,7 +13,7 @@ router.get('/about', (req, res) => {
 });
 
 router.get('/events', (req, res) => {
-    res.render('./pages/events');
+    res.render('./pages/events', { events });
 });
 
 router.get('/contact', (req, res) => {
