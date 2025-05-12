@@ -1,0 +1,8 @@
+.error-message {
+    color: red;
+    font-size: 0.9em;
+  }
+
+  input.error, textarea.error {
+    border: 2px solid red;
+  }
