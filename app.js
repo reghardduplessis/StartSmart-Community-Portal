@@ -1,5 +1,11 @@
-// app.js
+/*
+app.js
+This is the main file for the Community Portal Website application.
+It sets up the server, middleware, and routes. It also handles the contact form submission 
+and stores the data.
+*/ 
 
+// Load Modules and specify the port
 const express = require("express");
 const path = require("path");
 const pageRoutes = require("./routes/pageRoutes");

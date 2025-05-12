@@ -1,3 +1,4 @@
+// Events array used by the Events page
 const events = [
   {
     title: "Community Cleanup",
