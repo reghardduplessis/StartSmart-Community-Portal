@@ -31,6 +31,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+//creating array to store team members name, role and image
 const teammembers = [
   {name:'Reghard du Plesis', role:'', image: '/images/reggie.jpg'},
   {name:'Chad Clifton', role:'Team Leader', image: '/images/chad.jpg'},
@@ -39,11 +40,12 @@ const teammembers = [
   {name:'Grace Kangausaru', role:'Backend Developer', image: '/images/grace.jpg'},
 ];
 
+//making the array team members available to all templates but with the name team
 app.locals.team =teammembers;
 
 app.use("/", pageRoutes);
 
-
+// server listener code
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });

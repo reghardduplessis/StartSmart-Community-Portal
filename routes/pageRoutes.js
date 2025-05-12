@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/about', (req, res) => {
-    res.render('./pages/about');
+    res.render('./pages/about', {team: req.app.locals.team});
 });
 
 router.get('/events', (req, res) => {
