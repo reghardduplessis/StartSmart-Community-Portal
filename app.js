@@ -9,23 +9,11 @@ and stores the data.
 const express = require("express");
 const path = require("path");
 const pageRoutes = require("./routes/pageRoutes");
+const contactRoutes = require("./routes/contactRoutes");
 const { name } = require("ejs");
 
 const app = express();
 const port = 3000;
-
-// CONTACT FORM CODE - START
-app.use(express.urlencoded({ extended: true }));
-
-const contacts = [];
-
-app.post('/contact', (req, res) => {
-  const { name, email, message } = req.body;
-  contacts.push({ name, email, message });
-  console.log(contacts);
-  res.redirect('/thankyou');
-});
-// CONTACT FORM CODE - END
 
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
@@ -43,8 +31,9 @@ const teammembers = [
 //making the array team members available to all templates but with the name team
 app.locals.team =teammembers;
 
-app.use("/", pageRoutes);
 
+app.use("/", pageRoutes);
+app.use("/", contactRoutes);
 // server listener code
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
