@@ -6,3 +6,17 @@
   input.error, textarea.error {
     border: 2px solid red;
   }
+
+.card {
+  min-height: 400px;
+}
+
+.card-img-top {
+  height: 350px;         
+  object-fit: cover;
+  width: 100%;
+}
+
+footer{
+  text-align: center;
+}
