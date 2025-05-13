@@ -1,14 +1,85 @@
  
  <%- include('../partials/header') %>
 
+ <style>
+   
+        .card-container {
+            display: flex;
+            gap: 150px; 
+            padding: 1rem;
+            justify-content: center; /* Centers cards horizontally */
+            min-height: 50vh; /* Full viewport height to center vertically on page */
+            margin: 0 auto; /* Centers container horizontally */
+            width: 716px; /* Matches total width of two cards + gap */
+           flex-wrap: nowrap; /* Prevents wrapping to keep cards side-by-side */
+            
+        }
+
+        
+        .card {
+            width: 100%;
+            max-width: 350px; /* Matches image width */
+        }
+
+        .welcome-container{
+           width: 50%;
+           text-align: center;
+           margin: 0 auto; /* This centers the container horizontally */
+           padding: 20px;
+           color: black;
+           border-radius: 8px;
+             
+        }
+    </style>
+
 <!--Hero Section-->
-    <section class="hero-section">
-        <div class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
-            <h1>Responsive Navbar</h1>
-            <h1>Bootstrap 5</h1>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="welcome-container">
+    <h1 >Welcome to Our Vibrant and Ever-Growing Community Portal!</h1>
+    <p>We are absolutely thrilled to have you join us on this exciting journey of connection, collaboration, and celebration! Dive into a rich and engaging experience where you can explore a diverse array of upcoming events, discover the inspiring stories and passion behind our dedicated team, and stay fully immersed in all the dynamic happenings within our bustling community. Whether you’re here to learn something new, forge meaningful connections, share your unique talents, or simply soak in the energy of our collective spirit, there’s a place for everyone in our inclusive hub. Get ready to engage, contribute, and be a part of something truly special. Join us today and let’s build an unforgettable community experience together!</p>
+
+</div>
+    
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img class="placeholder card-img-top placeholder-wave" style="height: 150px; width: 270px;" alt="Placeholder image">
+            <div class="card-body placeholder-glow">
+                <h1 style="font-size:20px">Upcoming Events</h1>
+                <p class="card-text m-0 placeholder col-12"></p>
+                <p class="card-text m-0 placeholder col-12"></p>
+                <p class="card-text m-0 placeholder bg-primary"></p>
+                <p class="card-text m-0 placeholder bg-primary"></p>
+            </div>
         </div>
-
-    </section>
+        <!-- Card 2 -->
+        <div class="card">
+            <img class="placeholder card-img-top placeholder-wave" style="height: 150px; width: 270px;" alt="Placeholder image">
+            <div class="card-body placeholder-glow">
+                <h1 style="font-size:20px">Upcoming Events</h1>
+                <p class="card-text m-0 placeholder col-12"></p>
+                <p class="card-text m-0 placeholder col-12"></p>
+                <p class="card-text m-0 placeholder bg-primary"></p>
+                <p class="card-text m-0 placeholder bg-primary"></p>
+            </div>
+        </div>
+             
+    </div>
 
 <!--End Hero Section-->
+
+<br>
+<br>
+<br>
+<br>
+
+<%- include('../partials/footer') %>
