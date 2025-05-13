@@ -73,7 +73,7 @@
 }
 
 .hero-section::before {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: white;
     content: "";
     position: absolute;
     top: 0;
