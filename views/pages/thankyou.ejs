@@ -1,2 +1,23 @@
-<h1>Thank You!</h1>
-<p>Your message has been received.</p>
+<!--Thank You: Confirmation page after form submission -->
+
+<%- include('../partials/header') %>
+
+<div class="container mt-5 text-center">
+    <h1>Thank You!</h1>
+    <p>Your message has been received. We appreciate your feedback and will get back to you shortly.</p>
+    <a href="/" class="btn btn-primary mt-3">Go Back Home</a>
+</div>
+
+<!-- Optional: Add a message about redirecting -->
+<div class="alert alert-info mt-3">
+    <strong>Note:</strong> You will be redirected to the home page in 1 minute.
+
+    <!--// Redirect to home page after 1 minute (60000 milliseconds)-->
+    <script>
+        setTimeout(function() {
+           window.location.href = "/";
+        }, 60000);
+    </script>
+</div>
+
+<%- include('../partials/footer') %>
