@@ -21,3 +21,7 @@
   width: 100%;
 }
 
+.hover-text-warning:hover {
+  color: #ffc107 !important; /* Bootstrap's warning yellow */
+}
+
