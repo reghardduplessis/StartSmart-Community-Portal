@@ -8,4 +8,5 @@ const teamMembers = [
   {name:'Bootstrap', role:'Frontend Coordinator', image:'/images/about/bootstrap.jpeg'}
 ];
 
+// Exporting team members object to be used in other files
 exports.teamMembers = teamMembers;

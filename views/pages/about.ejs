@@ -1,15 +1,27 @@
 <!--About: Info about the team or organization (from an array in the backend, in data folder)-->
 
+<!--Including the shared header partial-->
 <%- include ('../partials/header') %>
 
+<!-- Main container for the About page -->
 <div id="mainAbout" class = "container mt-5">
 
+<!-- Page heading -->
 <h1 class="text-center mb-4">About Our Team</h1>
+
 <div class = "row">
+
+  <!-- Loop through each team member and create a card -->
     <% team.forEach(member => { %>
-        <div class="col-md-4 member mb-4">
+      <div class="col-md-4 member mb-4">
+
+       <!-- Card for individual team member -->
         <div class="card h-100 shadow-sm hover-shadow">
+
+           <!-- Team member's image -->
           <img src="<%= member.image %>" class="card-img-top" alt="<%= member.name %>">
+         
+          <!-- Card body with member details -->
           <div class="card-body bg-dark">
             <p class="card-text text-white">
               <strong class="text-warning">Name:</strong> <%= member.name %><br>
@@ -23,4 +35,5 @@
 
 </div>
 
+<!--Including the shared header partial-->
 <%- include ('../partials/footer') %>
