@@ -1,4 +1,4 @@
-
+<!-- partials/header.ejs -->
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,42 +12,28 @@
 </head>
 
 <header>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand re-auto" href="#">PUT LOGO HERE</a>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2 active" aria-current="page" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="/about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="/contact">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="/events">Events</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--<a href="#" class="login-button">Login</a>-->
-             <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center text-white" href="/">
+                <img src="./images/snail-logo.png" alt="Community Portal"
+                class="img-fluid" style="width: 40px; height: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" style="margin-left: 3em;">
+                    <a class="nav-link <%= title === 'Home' ? 'active' : '' %> text-white hover-text-warning" href="/">Home</a>
+                    <a class="nav-link <%= title === 'Events' ? 'active' : '' %> text-white hover-text-warning" href="/events">Events</a>
+                    <a class="nav-link <%= title === 'Contact' ? 'active' : '' %> text-white hover-text-warning" href="/contact">Contact</a>
+                    <a class="nav-link <%= title === 'About' ? 'active' : '' %> text-white hover-text-warning" href="/about">About</a>
+                </div>
+            </div>
         </div>
     </nav>
-    <!--End Navbar-->
-
+</header>
 
     <!--BootStrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"

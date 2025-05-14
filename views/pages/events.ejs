@@ -1,17 +1,17 @@
-<!--Events: Displays all events with title, date, location, and image (from an array)  -->
+<!--Events: Displays all events with title, date, location, and image (from an array in data folder)  -->
 
 <%- include('../partials/header') %>
 <!--cards made by Bootstrap-->
-<div class="container mt-5">
+<div id="eventsMain" class="container mt-5">
   <h1 class="mb-4 text-center">Upcoming Events</h1>
   <div class="row g-4">
     <% events.forEach(event => { %>
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm hover-shadow">
           <img src="<%= event.image %>" class="card-img-top" alt="<%= event.title %>">
-          <div class="card-body">
-            <h5 class="card-title"><%= event.title %></h5>
-            <p class="card-text">
+          <div class="card-body bg-dark">
+            <h5 class="card-title text-warning"><%= event.title %></h5>
+            <p class="card-text text-white">
               <strong>Date:</strong> <%= event.date %><br>
               <strong>Location:</strong> <%= event.location %>
             </p>

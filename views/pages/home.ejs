@@ -1,64 +1,77 @@
- 
- <%- include('../partials/header') %>
+<!--Home: Welcome message + updated upcoming events using dynamic-->
 
-<style>
-   
-        .card-container {
-            display: flex;
-            gap: 150px; 
-            padding: 1rem;
-            justify-content: center; /* Centers cards horizontally */
-            min-height: 50vh; /* Full viewport height to center vertically on page */
-            margin: 0 auto; /* Centers container horizontally */
-            width: 716px; /* Matches total width of two cards + gap */
-           flex-wrap: nowrap; /* Prevents wrapping to keep cards side-by-side */
-            
-        }
+<%- include('../partials/header') %>
 
-        
-        .card {
-            width: 100%;
-            max-width: 350px; /* Matches image width */
-        }
+<div id="mainHome" class="container text-center mt-5">
+  <div class="welcome-container px-5">
+    <h1 class="mb-4"><%= heading %></h1>
+    <div class="my-4">
+      <svg
+        width="100%"
+        height="40"
+        viewBox="0 0 600 40"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0,20 
+           Q50,0 100,20 
+           T200,20 
+           T300,20 
+           T400,20 
+           T500,20 
+           T600,20"
+          fill="transparent"
+          stroke="#ffc107"
+          stroke-width="4"
+        />
+      </svg>
+    </div>
+    <p class="py-2 px-5"><%= welcomeParagraph %></p>
+    <div class="my-4">
+      <svg
+        width="100%"
+        height="40"
+        viewBox="0 0 600 40"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0,20 
+           Q50,0 100,20 
+           T200,20 
+           T300,20 
+           T400,20 
+           T500,20 
+           T600,20"
+          fill="transparent"
+          stroke="#ffc107"
+          stroke-width="4"
+        />
+      </svg>
+    </div>
+  </div>
 
-        .welcome-container{
-           width: 50%;
-           text-align: center;
-           margin: 0 auto; /* This centers the container horizontally */
-           padding: 20px;
-           color: black;
-           border-radius: 8px;
-             
-        }
-</style>
-
-<!--Hero Section-->
-
-
-<div class="welcome-container">
-    <h1><%= title %></h1>
-    <p><%= welcomeParagraph %></p>
-</div>
-    
-    <div class="card-container d-flex gap-3 flex-wrap">
-  <% if (upcomingEvents.length > 0) { %>
-    <% upcomingEvents.forEach(event => { %>
-      <div class="card" style="width: 270px;">
-        <img src="<%= event.image %>" class="card-img-top" style="height: 150px;" alt="<%= event.title %>">
-        <div class="card-body">
-          <h5 style="font-size:20px">Upcoming Event</h5>
-          <p class="card-text m-0"><strong>Title:</strong> <%= event.title %></p>
-          <p class="card-text m-0"><strong>Date:</strong> <%= event.date %></p>
-          <p class="card-text m-0"><strong>Location:</strong> <%= event.location %></p>
-        </div>
+  <div class="card-container justify-content-center d-flex gap-3 flex-wrap">
+    <% if (upcomingEvents.length > 0) { %> <% upcomingEvents.forEach(event => {
+    %>
+    <div class="card shadow-sm hover-shadow" style="width: 270px">
+      <img
+        src="<%= event.image %>"
+        class="card-img-top"
+        style="height: 150px"
+        alt="<%= event.title %>"
+      />
+      <div class="card-body bg-dark">
+        <h5 class="text-warning" style="font-size: 20px"><%= event.title %></h5>
+        <p class="card-text m-0 text-white"><strong class="text-warning">Date:</strong> <%= event.date %></p>
+        <p class="card-text m-0 text-white">
+          <strong class="text-warning">Location:</strong> <%= event.location %>
+        </p>
       </div>
-    <% }) %>
-  <% } else { %>
+    </div>
+    <% }) %> <% } else { %>
     <p>No upcoming events.</p>
-  <% } %>
+    <% } %>
+  </div>
 </div>
-
-
-<!--End Hero Section-->
 
 <%- include('../partials/footer') %>

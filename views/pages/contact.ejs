@@ -1,28 +1,30 @@
+<!--Contact: Simple contact form (name, email, message) – stores to in-memory array within data folder-->
+
 <%- include('../partials/header') %>
 
-<div class="container d-flex flex-column justify-content-center align-items-center min-vh-100">
+<div id="mainContact" class="container mt-5 d-flex flex-column justify-content-center align-items-center">
   <h1 class="text-center mb-4">Contact Us</h1>
-  <div class="card p-4 shadow w-100" style="max-width: 500px;">
+  <div class="card p-4 shadow w-100 form-narrow bg-dark">
     <form id="contactForm" method="POST" action="/contact" novalidate>
       <div class="mb-3">
-        <label for="name" class="form-label">Your Name</label>
+        <label for="name" class="form-label text-warning">Your Name</label>
         <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
         <div class="invalid-feedback" id="nameError"></div>
       </div>
 
       <div class="mb-3">
-        <label for="email" class="form-label">Your Email</label>
+        <label for="email" class="form-label text-warning">Your Email</label>
         <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
         <div class="invalid-feedback" id="emailError"></div>
       </div>
 
       <div class="mb-3">
-        <label for="message" class="form-label">Your Message</label>
+        <label for="message" class="form-label text-warning">Your Message</label>
         <textarea name="message" id="message" class="form-control" rows="4" placeholder="Type your message" required></textarea>
         <div class="invalid-feedback" id="messageError"></div>
       </div>
 
-      <button type="submit" class="btn btn-primary w-100">Send</button>
+      <button type="submit" class="btn btn-primary w-100 bg-warning text-dark border-dark hover-btn">Send</button>
     </form>
   </div>
 </div>

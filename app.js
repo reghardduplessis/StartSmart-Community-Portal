@@ -19,17 +19,10 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-//creating array to store team members name, role and image
-const teammembers = [
-  {name:'Reghard du Plesis', role:'Documentation Manager', image: '/images/reggie.jpg'},
-  {name:'Chad Clifton', role:'Team Leader', image: '/images/chad.jpg'},
-  {name:'Zander Lindeque', role:'Data Manager', image: '/images/zander.jpg'},
-  {name:'Christopher Wawa', role:'Frontend Developer', image: '/images/chris.jpg'},
-  {name:'Grace Kangausaru', role:'Backend Developer', image: '/images/grace.jpg'},
-];
-
+// Loads the array data from data/about.js.
+const teamMembers = require("./public/data/about").teamMembers;
 //making the array team members available to all templates but with the name team
-app.locals.team =teammembers;
+app.locals.team =teamMembers;
 
 
 app.use("/", pageRoutes);

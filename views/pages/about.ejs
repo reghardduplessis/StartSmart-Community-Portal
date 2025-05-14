@@ -1,17 +1,19 @@
+<!--About: Info about the team or organization (from an array in the backend, in data folder)-->
+
 <%- include ('../partials/header') %>
 
-<div class = "containerAbout">
+<div id="mainAbout" class = "container mt-5">
 
-<h1>About Our Team</h1>
+<h1 class="text-center mb-4">About Our Team</h1>
 <div class = "row">
     <% team.forEach(member => { %>
-        <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
+        <div class="col-md-4 member mb-4">
+        <div class="card h-100 shadow-sm hover-shadow">
           <img src="<%= member.image %>" class="card-img-top" alt="<%= member.name %>">
-          <div class="card-body">
-            <p class="card-text">
-              <strong>Name:</strong> <%= member.name %><br>
-              <strong>Role:</strong> <%= member.role %>
+          <div class="card-body bg-dark">
+            <p class="card-text text-white">
+              <strong class="text-warning">Name:</strong> <%= member.name %><br>
+              <strong class="text-warning">Role:</strong> <%- member.role %>
             </p>
           </div>
         </div>
