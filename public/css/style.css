@@ -1,7 +1,11 @@
 
 
 header{
-    padding-bottom: 60px;
+    padding-bottom: 1em;
+}
+
+footer{
+    padding-top: 1em;
 }
 
 .error-message {
@@ -125,10 +129,10 @@ footer{
 }
 
 .containerAbout{
-    padding-top: 20px;
+    padding-top: 0.333em;
 }
 
 .containerAbout h1{
     text-align: center;
-    padding: 30px;
+    padding: 0.5em;
 }
