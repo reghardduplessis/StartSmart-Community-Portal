@@ -25,7 +25,7 @@
   color: #ffc107 !important; 
 }
 
-.contact-btn:hover {
+.hover-btn:hover {
   background-color: #212529 !important;  
   color: #ffc107 !important;             
   border-color: #ffc107 !important;      /* !important overrides the bootstrap styling */
