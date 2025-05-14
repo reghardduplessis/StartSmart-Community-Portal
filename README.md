@@ -50,6 +50,12 @@ A simple community driven web portal designed to showcase community events and p
 - Developed server-side logic, handled routing, form processing and data management using Node.js and Express.js.
 
 
+## Screenshots
+
+![Homepage ScreenShot](public/images/readmeScreenshots/home.png)
+
+![What the Instructions should look like](public/images/readmeScreenshots/consoleSs.png)
+
 ## Reflection
 
 Working on this project has enhanced our skills in full-stack development. We have gained a deeper understanding of integrating modern front-end frameworks with robust backend systems and have improved our ability to collaborate as a team using GitHub. We also learned the importance of proper branching and intuitive merge conflict handling. 
