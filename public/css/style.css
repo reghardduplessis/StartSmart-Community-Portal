@@ -22,6 +22,18 @@
 }
 
 .hover-text-warning:hover {
-  color: #ffc107 !important; /* Bootstrap's warning yellow */
+  color: #ffc107 !important; 
 }
 
+.contact-btn:hover {
+  background-color: #212529 !important;  
+  color: #ffc107 !important;             
+  border-color: #ffc107 !important;      /* !important overrides the bootstrap styling */
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4) !important;
+  transform: scale(1.02);
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  /* This makes the box enlarge and adds a shadow, giving the effect of the event box popping out of the page */
+}
