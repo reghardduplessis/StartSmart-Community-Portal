@@ -1,3 +1,13 @@
+
+
+header{
+    padding-bottom: 1em;
+}
+
+footer{
+    padding-top: 1em;
+}
+
 .error-message {
     color: red;
     font-size: 0.9em;
@@ -24,7 +34,6 @@ footer{
 .navbar{
     background-color: #fff;
     height: 80px;
-    margin: 20px;
     border-radius: 16px;
     padding: 0.5rem;
 }
@@ -117,4 +126,13 @@ footer{
 
 .hero-section h2{
     font-size: 1.2em;
+}
+
+.containerAbout{
+    padding-top: 0.333em;
+}
+
+.containerAbout h1{
+    text-align: center;
+    padding: 0.5em;
 }
