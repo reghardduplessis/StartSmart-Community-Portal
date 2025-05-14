@@ -1,9 +1,8 @@
-<!--Contact: Simple contact form (name, email, message) – stores to in-memory array -->
 <%- include('../partials/header') %>
 
-<div class="container d-flex justify-content-center align-items-center min-vh-100">
+<div class="container mt-5 d-flex flex-column justify-content-center align-items-center">
+  <h1 class="text-center mb-4">Contact Us</h1>
   <div class="card p-4 shadow w-100" style="max-width: 500px;">
-    <h1 class="text-center mb-4">Contact Us</h1>
     <form id="contactForm" method="POST" action="/contact" novalidate>
       <div class="mb-3">
         <label for="name" class="form-label">Your Name</label>
