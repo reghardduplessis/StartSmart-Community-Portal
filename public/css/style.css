@@ -7,6 +7,10 @@
     border: 2px solid red;
   }
 
+.form-narrow{
+    max-width: 32rem;
+}
+
 .card {
   min-height: 400px;
 }
