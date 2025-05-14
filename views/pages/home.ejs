@@ -34,51 +34,31 @@
 
 <!--Hero Section-->
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <div class="welcome-container">
     <h1><%= title %></h1>
     <p><%= welcomeParagraph %></p>
 </div>
     
-    <div class="card-container">
-        <!-- Card 1 -->
-        <div class="card">
-            <img class="placeholder card-img-top placeholder-wave" style="height: 150px; width: 270px;" alt="Placeholder image">
-            <div class="card-body placeholder-glow">
-                <h1 style="font-size:20px">Upcoming Events</h1>
-                <p class="card-text m-0 placeholder col-12"></p>
-                <p class="card-text m-0 placeholder col-12"></p>
-                <p class="card-text m-0 placeholder bg-primary"></p>
-                <p class="card-text m-0 placeholder bg-primary"></p>
-            </div>
+    <div class="card-container d-flex gap-3 flex-wrap">
+  <% if (upcomingEvents.length > 0) { %>
+    <% upcomingEvents.forEach(event => { %>
+      <div class="card" style="width: 270px;">
+        <img src="<%= event.image %>" class="card-img-top" style="height: 150px;" alt="<%= event.title %>">
+        <div class="card-body">
+          <h5 style="font-size:20px">Upcoming Event</h5>
+          <p class="card-text m-0"><strong>Title:</strong> <%= event.title %></p>
+          <p class="card-text m-0"><strong>Date:</strong> <%= event.date %></p>
+          <p class="card-text m-0"><strong>Location:</strong> <%= event.location %></p>
         </div>
-        <!-- Card 2 -->
-        <div class="card">
-            <img class="placeholder card-img-top placeholder-wave" style="height: 150px; width: 270px;" alt="Placeholder image">
-            <div class="card-body placeholder-glow">
-                <h1 style="font-size:20px">Upcoming Events</h1>
-                <p class="card-text m-0 placeholder col-12"></p>
-                <p class="card-text m-0 placeholder col-12"></p>
-                <p class="card-text m-0 placeholder bg-primary"></p>
-                <p class="card-text m-0 placeholder bg-primary"></p>
-            </div>
-        </div>
-             
-    </div>
+      </div>
+    <% }) %>
+  <% } else { %>
+    <p>No upcoming events.</p>
+  <% } %>
+</div>
+
 
 <!--End Hero Section-->
-
-<br>
-<br>
-<br>
-<br>
 
 <%- include('../partials/footer') %>
