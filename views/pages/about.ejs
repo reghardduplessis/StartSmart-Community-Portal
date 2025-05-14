@@ -1,1 +1,24 @@
-<h1>About Us</h1>
+<%- include ('../partials/header') %>
+
+<div class = "container">
+
+<h1>About Our Team</h1>
+<div class = "row">
+    <% team.forEach(member => { %>
+        <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="<%= member.image %>" class="card-img-top" alt="<%= member.name %>">
+          <div class="card-body">
+            <p class="card-text">
+              <strong>Name:</strong> <%= member.name %><br>
+              <strong>Role:</strong> <%= member.role %>
+            </p>
+          </div>
+        </div>
+      </div>
+   <% }); %>
+</div>
+
+</div>
+
+<%- include ('../partials/footer') %>
