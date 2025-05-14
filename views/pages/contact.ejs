@@ -5,31 +5,42 @@
 <div id="mainContact" class="container mt-5 d-flex flex-column justify-content-center align-items-center">
   <h1 class="text-center mb-4">Contact Us</h1>
   <div class="card p-4 shadow w-100 form-narrow bg-dark">
+    
+    <!-- FORM START -->
     <form id="contactForm" method="POST" action="/contact" novalidate>
+
+      <!-- NAME INPUT START-->
       <div class="mb-3">
         <label for="name" class="form-label text-warning">Your Name</label>
         <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
         <div class="invalid-feedback" id="nameError"></div>
       </div>
+      <!-- NAME INPUT END -->
 
+      <!-- EMAIL INPUT START -->
       <div class="mb-3">
         <label for="email" class="form-label text-warning">Your Email</label>
         <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
         <div class="invalid-feedback" id="emailError"></div>
       </div>
+      <!-- EMAIL INPUT END -->
 
+      <!-- MESSAGE INPUT START -->
       <div class="mb-3">
         <label for="message" class="form-label text-warning">Your Message</label>
         <textarea name="message" id="message" class="form-control" rows="4" placeholder="Type your message" required></textarea>
         <div class="invalid-feedback" id="messageError"></div>
       </div>
+      <!-- MESSAGE INPUT END -->
 
       <button type="submit" class="btn btn-primary w-100 bg-warning text-dark border-dark hover-btn">Send</button>
     </form>
+    <!-- FORM END -->
+
   </div>
 </div>
 
-  <script src="/data/contact.js"></script>
-  
+  <!-- LINK SCRIPT FOR VALIDATION -->
+  <script src="/data/contact.js"></script> 
   <%- include('../partials/footer') %>
 

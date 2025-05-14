@@ -10,7 +10,7 @@ const contacts = [];
 router.post('/contact', (req, res) => {
   const { name, email, message } = req.body;
   contacts.push({ name, email, message });
-  console.log(contacts);
+  console.log(contacts); //logs the inputted contact information for testing
   res.redirect('/thankyou');
 });
 // CONTACT FORM CODE - END
