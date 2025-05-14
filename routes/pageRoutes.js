@@ -21,18 +21,22 @@ router.get("/", (req, res) => {
   });
 });
 
+// About page route
 router.get("/about", (req, res) => {
   res.render("./pages/about", { team: req.app.locals.team, title: "About" });
 });
 
+// Events page route
 router.get("/events", (req, res) => {
   res.render("./pages/events", { events, title: "Events" });
 });
 
+// Contact page route
 router.get("/contact", (req, res) => {
   res.render("./pages/contact", { title: "Contact" });
 });
 
+// Thank you page route
 router.get("/thankyou", (req, res) => {
   res.render("./pages/thankyou", { title: "Thank you" });
 });
