@@ -39,15 +39,15 @@ A simple community driven web portal designed to showcase community events and p
 ## Team Member and Roles
 
 1. Chad Clifton - Team Lead
-Oversaw the project timeline, coordinated tasks between team members and ensured milestones were met.
+- Oversaw the project timeline, coordinated tasks between team members and ensured milestones were met.
 2. Reghard du Plessis - Documentation Manager
-Responsible for writing and maintaining project documentation, including this README.
+- Responsible for writing and maintaining project documentation, including this README.
 3. Zander Lindeque - Data Manager
-Managed structered data such as team member profiles, ensured consistency in formatting and integrated data into the assignment.
+- Managed structered data such as team member profiles, ensured consistency in formatting and integrated data into the assignment.
 4. Christopher Wawa - Frontend Developer
-Designed and implemented the user interface using CSS, Javascript and Bootstrap which ensured responsiveness and accesibility.
+- Designed and implemented the user interface using CSS, Javascript and Bootstrap which ensured responsiveness and accesibility.
 5. Grace Kangausaru - Backend Developer
-Developed server-side logic, handled routing, form processing and data management using Node.js and Express.js.
+- Developed server-side logic, handled routing, form processing and data management using Node.js and Express.js.
 
 
 ## Reflection
