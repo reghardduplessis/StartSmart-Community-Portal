@@ -26,6 +26,7 @@ const teammembers = [
   {name:'Zander Lindeque', role:'Data Manager', image: '/images/zander.jpg'},
   {name:'Christopher Wawa', role:'Frontend Developer', image: '/images/chris.jpg'},
   {name:'Grace Kangausaru', role:'Backend Developer', image: '/images/grace.jpg'},
+  {name:'Bootstrap', role:'Frontend Coordinator', image:'/images/bootstrap.jpeg'}
 ];
 
 //making the array team members available to all templates but with the name team
