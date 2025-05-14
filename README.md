@@ -52,8 +52,16 @@ A simple community driven web portal designed to showcase community events and p
 
 ## Screenshots
 
+### Homepage
 ![Homepage ScreenShot](public/images/readmeScreenshots/home.png)
 
+### Events
+![Events ScreenShot](public/images/readmeScreenshots/eventsSs.png)
+
+### Contact Form
+![Contact Form Screenshot](public/images/readmeScreenshots/contactSs.png)
+
+### Instructions
 ![What the Instructions should look like](public/images/readmeScreenshots/consoleSs.png)
 
 ## Reflection
